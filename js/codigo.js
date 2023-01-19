@@ -4,6 +4,11 @@ let vidasJugador = 3
 let vidasEnemigo = 3
 
 function iniciarJuego() {
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'none'
+
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'none'
     let botonMascotaJugador = document.getElementById('boton-mascota');
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
@@ -19,9 +24,15 @@ function iniciarJuego() {
 }
 
 function seleccionarMascotaJugador(mascota) {
+    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
+    sectionSeleccionarMascota.style.display = 'none'
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'block'
+
     let inputFuegomon = document.getElementById('fuegomon')
     let inputAguamon = document.getElementById('aguamon')
     let inputTierramon = document.getElementById('tierramon')
+
     let spanMascotaJugador = document.getElementById('mascota-jugador')
     let Mascotajugador = document.getElementById('mascota-jugador')
 
@@ -36,6 +47,7 @@ function seleccionarMascotaJugador(mascota) {
 
     seleccionarMascotaenemigo()
 }
+
 
 function ataqueFuego() {
     ataqueJugador = 'Fuego'
@@ -103,6 +115,7 @@ function combate() {
             crearMensajeFinal('Tu wachimon termino en coma y fue llevado al hospital 😢😢😢')
         }
 
+
     }
 
 }
@@ -128,6 +141,8 @@ function crearMensajeFinal(resultadoFinal) {
     botonTierra.disabled = true
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.disabled = true
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'block'
 }
 
 function reiniciarJuego() {
