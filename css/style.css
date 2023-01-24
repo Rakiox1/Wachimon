@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+
+    font-family: 'Press Start 2P', cursive;
+    --White: rgba(228, 238, 249, .5);
+    --border-blur: solid 4pxrgba(255, 255, 255, .5);
+    --box-shadow: 020px30px4pxrgba(0, 0, 0, .2);
+    --text: #F1EDED;
+}
+
+body {
+    background-color: whitesmoke;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #ff0000, #ee9f9f);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#seleccionar-mascota {
+    border-radius: 10px;
+    display: flex;
+    background-color: lightgray;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 5px solid black;
+    margin-right: 200px;
+    margin-left: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+#seleccionar-ataque {
+    border-radius: 10px;
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 5px solid black;
+    margin-right: 200px;
+    margin-left: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    padding-top: 10px;
+    font-size: 1.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 1.375rem;
+    -webkit-border-radius: 1.375rem;
+    -moz-border-radius: 1.375rem;
+    padding: 0.35rem 0.75rem;
+    border-style: solid;
+    border-width: 0.125rem;
+    border-color: #eb0033;
+    -box-shadow: none;
+    transition-duration: 0.4s;
+    margin-bottom: 15px;
+
+}
+
+label:hover {
+    background-color: red;
+    color: white;
+}
+
+.mascota-radio {
+    display: none;
+}
+
+#boton-mascota {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.6875rem;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+}
+
+#boton-mascota:hover {
+    transition-duration: 0.4s;
+    background-color: black;
+    color: white
+}
+
+#boton-fuego {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.6875rem;
+    background-color: white;
+    color: black;
+    border: 2px solid red;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+#boton-fuego:hover {
+    transition-duration: 0.4s;
+    background-color: red;
+    color: white
+}
+
+#boton-agua {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.6875rem;
+    background-color: white;
+    color: black;
+    border: 2px solid blue;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+#boton-agua:hover {
+    transition-duration: 0.4s;
+    background-color: blue;
+    color: white
+}
+
+#boton-tierra {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.6875rem;
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+#boton-tierra:hover {
+    transition-duration: 0.4s;
+    background-color: green;
+    color: white
+}
+
+#boton-reiniciar {
+    margin: 10px;
+    font-size: 1.6875rem;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+}
+
+#boton-reiniciar:hover {
+    transition-duration: 0.4s;
+    background-color: black;
+    color: white
+}
