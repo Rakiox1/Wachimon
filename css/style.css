@@ -10,11 +10,13 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-image: url(../assets/latias-pixel-art-clouds-pokemon-wallpaper-preview.jpg);
+    /* background-color: whitesmoke; */
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
+
 }
 
 .titulo {
@@ -26,37 +28,36 @@ body {
     -webkit-background-clip: text;
 }
 
-#seleccionar-mascota {
-    border-radius: 10px;
+.tarjeta-mascota {
+    width: 252px;
+    height: 252px;
+    background: whitesmoke;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
     display: flex;
-    background-color: lightgray;
+    justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: column;
-    border: 5px solid black;
-    margin-right: 200px;
-    margin-left: 200px;
-    justify-content: center;
-    align-items: center;
 }
 
-#seleccionar-ataque {
-    border-radius: 10px;
-    background-color: lightgray;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    border: 5px solid black;
-    margin-right: 200px;
-    margin-left: 200px;
-    justify-content: center;
-    align-items: center;
+.tarjeta-mascota img {
+    width: 250px;
+    height: 250px;
+    margin-top: -37px;
 }
+
+
+
+.tarjetas,
+.ataque {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 
 label {
     padding-top: 10px;
-    font-size: 1.6875rem;
-    font-weight: 500;
-    letter-spacing: 0.025rem;
     font-style: normal;
     text-transform: uppercase;
     color: #000000;
@@ -83,6 +84,10 @@ label:hover {
     display: none;
 }
 
+.mascota-radio:checked+label {
+    background-color: red;
+}
+
 #boton-mascota {
     display: inline-block;
     margin: 10px;
@@ -91,6 +96,9 @@ label:hover {
     color: black;
     border: 2px solid black;
     transition-duration: 0.4s;
+    border-radius: 20px;
+    width: 173px;
+    height: 39px;
 }
 
 #boton-mascota:hover {
@@ -99,7 +107,15 @@ label:hover {
     color: white
 }
 
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 #boton-fuego {
+    width: 180px;
     display: inline-block;
     margin: 10px;
     font-size: 1.6875rem;
@@ -117,6 +133,7 @@ label:hover {
 }
 
 #boton-agua {
+    width: 180px;
     display: inline-block;
     margin: 10px;
     font-size: 1.6875rem;
@@ -134,6 +151,7 @@ label:hover {
 }
 
 #boton-tierra {
+    width: 180px;
     display: inline-block;
     margin: 10px;
     font-size: 1.6875rem;
@@ -150,6 +168,50 @@ label:hover {
     color: white
 }
 
+.padre-mascota {
+    display: grid;
+    grid-template-columns: 200px 200px;
+}
+
+.hijo-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 1.375rem;
+    -webkit-border-radius: 1.375rem;
+    -moz-border-radius: 1.375rem;
+    padding: 0.35rem 0.75rem;
+    border-style: solid;
+    border-width: 0.125rem;
+    border-color: #eb0033;
+    -box-shadow: none;
+    transition-duration: 0.4s;
+    margin-bottom: 15px;
+}
+
+#mensajes {
+    padding-top: 10px;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 1.375rem;
+    -webkit-border-radius: 1.375rem;
+    -moz-border-radius: 1.375rem;
+    padding: 0.35rem 0.75rem;
+    border-style: solid;
+    border-width: 0.125rem;
+    border-color: gray;
+    -box-shadow: none;
+    transition-duration: 0.4s;
+    margin-bottom: 15px;
+}
+
 #boton-reiniciar {
     margin: 10px;
     font-size: 1.6875rem;
@@ -163,4 +225,12 @@ label:hover {
     transition-duration: 0.4s;
     background-color: black;
     color: white
+}
+
+@media (max-width: 360px) {
+
+    .tarjetas,
+    .ataque {
+        flex-direction: column;
+    }
 }

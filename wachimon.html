@@ -11,34 +11,76 @@
 </head>
 
 <body>
-    <h1 class="titulo"> Wachimon!</h1>
+    <h1 class="titulo"> Wachimon</h1>
     <section id="seleccionar-mascota">
-        <h2>Elige un Wachimon</h2>
-        <label for="fuegomon">Fuegomon🔥</label>
-        <input class="mascota-radio" type="radio" name="mascota" id="fuegomon">
-        <label for="aguamon">Aguamon💧</label>
-        <input class="mascota-radio" type="radio" name="mascota" id="aguamon">
-        <label for="tierramon">Tierramon🍆</label>
-        <input class="mascota-radio" type="radio" name="mascota" id="tierramon">
+
+        <h2 class="subtitulo">Seleciona tu Wachimon</h2>
+        <div class="tarjetas">
+
+            <input class="mascota-radio" type="radio" name="mascota" id="fuegomon">
+            <label class="tarjeta-mascota" for="fuegomon">Fuegomon🔥
+                <img src="./assets/Fuegomon.png" alt="Fuegomon">
+            </label>
+
+            <input class="mascota-radio" type="radio" name="mascota" id="aguamon">
+            <label class="tarjeta-mascota" for="aguamon">Aguamon💧
+                <img src="./assets/aguamon.png" alt="aguamon">
+            </label>
+
+            <input class="mascota-radio" type="radio" name="mascota" id="tierramon">
+            <label class="tarjeta-mascota" for="tierramon">Tierramon🍆
+                <img src="./assets/Tierramon.png" alt="Fuegomon">
+            </label>
+
+
+        </div>
         <button id="boton-mascota">Elegir</button>
     </section>
 
     <section id="seleccionar-ataque">
         <h2>Elige tu ataque</h2>
-        <p>Tu Wachimon<span id="mascota-jugador"></span> tiene <span id="vida-jugador">3</span> vidas</p>
-        <p>el Wachimon<span id="mascota-Enemigo"></span> rival tiene <span id="vida-enemigo">3</span> vidas</p>
-        <p>
+        <div class="Ataque">
             <button id="boton-fuego">Fuego🔥</button>
             <button id="boton-agua">Agua💧</button>
             <button id="boton-tierra">Tierra🍆</button>
-        </p>
+        </div>
+        <section id="mensajes">
+            <p id="resultado"></p>
+        </section>
+        <section id="reiniciar"><button id="boton-reiniciar">Reiniciar</button></section>
+
+        <div>
+            <section id="final">
+            </section>
+
+        </div>
+
+        <div class="padre-mascota">
+            <div class="hijo-mascota">
+                <p id="vida-jugador">3❤</p>
+                <p id="mascota-jugador"></p>
+                <div id="ataques-del-jugador"> </div>
+            </div>
+            <div class="hijo-mascota">
+                <p id="vida-enemigo">3❤</p>
+                <p id="mascota-Enemigo"></p>
+                <div id="ataques-del-enemigo">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+
+
     </section>
+
+
+
     <h2>este es como pokemon pero mas barato</h2>
-    <section id="log">
-    </section>
-    <section id="final">
-    </section>
-    <section id="reiniciar"><button id="boton-reiniciar">Reiniciar</button></section>
 </body>
 
 </html>

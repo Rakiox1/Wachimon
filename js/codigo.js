@@ -27,7 +27,7 @@ function seleccionarMascotaJugador(mascota) {
     let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
     sectionSeleccionarMascota.style.display = 'none'
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'block'
+    sectionSeleccionarAtaque.style.display = 'flex'
 
     let inputFuegomon = document.getElementById('fuegomon')
     let inputAguamon = document.getElementById('aguamon')
@@ -50,15 +50,15 @@ function seleccionarMascotaJugador(mascota) {
 
 
 function ataqueFuego() {
-    ataqueJugador = 'Fuego'
+    ataqueJugador = 'Fuego🔥'
     ataqueAleatorioEnemigo()
 }
 function ataqueAgua() {
-    ataqueJugador = 'Agua'
+    ataqueJugador = 'Agua💧'
     ataqueAleatorioEnemigo()
 }
 function ataqueTierra() {
-    ataqueJugador = 'Tierra'
+    ataqueJugador = 'Tierra🍆'
     ataqueAleatorioEnemigo()
 }
 
@@ -67,11 +67,11 @@ let resultado
 function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = numeroAleatorio(1, 3)
     if (ataqueAleatorio == 1) {
-        ataqueEnemigo = 'Fuego'
+        ataqueEnemigo = 'Fuego🔥'
     } else if (ataqueAleatorio == 2) {
-        ataqueEnemigo = 'Agua'
+        ataqueEnemigo = 'Agua💧'
     } else {
-        ataqueEnemigo = 'Tierra'
+        ataqueEnemigo = 'Tierra🍆'
     }
 
     combate()
@@ -85,21 +85,21 @@ function combate() {
     if (ataqueEnemigo == ataqueJugador) {
         resultado = " ¡EMPATE! 🤼"
 
-    } else if (ataqueJugador == 'Fuego' && ataqueEnemigo == 'Tierra') {
+    } else if (ataqueJugador == 'Fuego🔥' && ataqueEnemigo == 'Tierra🍆') {
         resultado = " ¡GANASTE! 🥳"
         vidasEnemigo--
         spanVidaEnemigo.innerHTML = vidasEnemigo
-    } else if (ataqueJugador == 'Agua' && ataqueEnemigo == 'Fuego') {
+    } else if (ataqueJugador == 'Agua💧' && ataqueEnemigo == 'Fuego🔥') {
         resultado = " ¡GANASTE! 🥳"
         vidasEnemigo--
         spanVidaEnemigo.innerHTML = vidasEnemigo
-    } else if (ataqueJugador == 'Tierra' && ataqueEnemigo == 'Agua') {
+    } else if (ataqueJugador == 'Tierra🍆' && ataqueEnemigo == 'Agua💧') {
         Resultado = " ¡GANASTE! 🥳"
         vidasEnemigo--
         spanVidaEnemigo.innerHTML = vidasEnemigo
 
     } else {
-        resultado = " PERDISTE... 😢"
+        Resultado = " PERDISTE... 😢"
         vidasJugador--
         spanVidaJugador.innerHTML = vidasJugador
         spanVidaEnemigo.innerHTML = vidasEnemigo
@@ -121,11 +121,22 @@ function combate() {
 }
 
 
-function crearMensaje() {
-    let sectionLog = document.getElementById('log')
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'tu Wachimon atacó con ' + ataqueJugador + ', el wachimon enemigo atacó con ' + ataqueEnemigo + ":" + resultado
-    sectionLog.appendChild(parrafo)
+function crearMensaje(resultado) {
+    let sectionLog = document.getElementById('resultado')
+    let ataquesDelJugador = document.getElementById('ataques-del-jugador')
+    let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
+
+
+    let NuevoAtaqueDelJugador = document.createElement('p')
+    let NuevoAtaqueDelEnemigo = document.createElement('p')
+
+    sectionLog.innerHTML = Resultado
+    NuevoAtaqueDelJugador.innerHTML = ataqueJugador
+    NuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
+
+    ataquesDelJugador.appendChild(NuevoAtaqueDelJugador)
+    ataquesDelEnemigo.appendChild(NuevoAtaqueDelEnemigo)
 }
 function crearMensajeFinal(resultadoFinal) {
     let sectionLog = document.getElementById('final')
